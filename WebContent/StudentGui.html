@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+  function validate()
+		{
+			if(document.et.check1.checked)
+                {
+                    document.getElementById("check10").innerHTML = "<tr colspan=\"2\">&nbsp&nbsp&nbsp You are required to select 4 subjects if you are an under-graduate otherwise you need to fill 3.</tr>";
+                    document.getElementById("check11").innerHTML = "<tr>&nbsp&nbsp&nbsp<select><option value=\"none\">--------</option><option value=\"advanced signal processing\">advanced signal processing</option><option value=\"VLSI Design\">VLSI Design</option><option value=\"CMOS Design\">CMOS Design</option><option value=\"Linear systems\">Linear systems</option></select> </tr>";
+                    document.getElementById("check12").innerHTML = "<tr>&nbsp&nbsp&nbsp<select><option value=\"none\">--------</option><option value=\"advanced signal processing\">advanced signal processing</option><option value=\"VLSI Design\">VLSI Design</option><option value=\"CMOS Design\">CMOS Design</option><option value=\"Linear systems\">Linear systems</option></select> </tr>";
+                    document.getElementById("check13").innerHTML = "<tr>&nbsp&nbsp&nbsp<select><option value=\"none\">--------</option><option value=\"advanced signal processing\">advanced signal processing</option><option value=\"VLSI Design\">VLSI Design</option><option value=\"CMOS Design\">CMOS Design</option><option value=\"Linear systems\">Linear systems</option></select> </tr>";
+                    document.getElementById("check14").innerHTML = "<tr>&nbsp&nbsp&nbsp<select><option value=\"none\">--------</option><option value=\"advanced signal processing\">advanced signal processing</option><option value=\"VLSI Design\">VLSI Design</option><option value=\"CMOS Design\">CMOS Design</option><option value=\"Linear systems\">Linear systems</option></select> </tr>";
+                }
+            else
+            {
+               	document.getElementById("check10").innerHTML="";
+               	document.getElementById("check11").innerHTML="";
+               	document.getElementById("check12").innerHTML="";
+               	document.getElementById("check13").innerHTML="";
+               	document.getElementById("check14").innerHTML="";
+            }
+
+            if(document.et.check2.checked)
+          	{
+              	document.getElementById("check20").innerHTML="<tr><td>Name of College</td><td><input type=\"text\" name=\"gicollege\"></td></tr>";
+              	document.getElementById("check21").innerHTML="<tr><td>City</td><td><input type=\"text\" name=\"pgicity\"></td></tr>"
+              	document.getElementById("check22").innerHTML="<tr><td>State</td><td><select name = \"pgistate\"><option value=\"1\">All</option><option value=\"2\">Andhra Pradesh</option><option value=\"3\">Arunachal Pradesh</option><option value=\"4\">Assam</option><option value=\"5\">Bihar</option><option value=\"6\">Chattisgarh</option><option value=\"7\">Delhi</option><option value=\"8\">Goa</option><option value=\"9\">Gujarat</option><option value=\"10\">Haryana</option><option value=\"11\">Himachal Pradesh</option><option value=\"12\">Jammu and Kashmir</option><option value=\"13\">Jharkhand</option><option value=\"14\">Karnataka</option><option value=\"15\">Kerala</option><option value=\"16\">Madhya Pradesh</option><option value=\"17\">Maharashtra</option><option value=\"18\">Manipur</option><option value=\"19\">Meghalaya</option><option value=\"20\">Mizoram</option><option value=\"21\">Nagaland</option><option value=\"22\">Odisha</option><option value=\"23\">Rajasthan</option><option value=\"24\">Sikkim</option><option value=\"25\">Tamil Nadu</option><option value=\"26\">Telangana</option><option value=\"27\">Tripura</option><option value=\"28\">Uttar Pradesh</option><option value=\"29\">Uttarakhand</option><option value=\"30\">West Bengal</option></select></td></tr>";
+              	document.getElementById("check23").innerHTML="<tr><td>Department</td><td><input type=\"text\" name=\"pgidepart\"></td></tr>";
+              	document.getElementById("check25").innerHTML="<tr><td>Degree</td><td><input type=\"text\" name=\"pgidegree\"></td></tr>";
+              	document.getElementById("check26").innerHTML="<tr><td>Thesis/title</td><td><input type=\"text\" name=\"pgititle\"></td></tr>";
+              	document.getElementById("check27").innerHTML="<tr><td>Year of Graduation*</td><td><select name=\"pgiyear\"><option value=\"1\">2010</option><option value=\"2\">2011</option><option value=\"3\">2013</option><option value=\"4\">2014</option></select></td></tr>";
+              	document.getElementById("check28").innerHTML="<tr><td align=\"top\">CGPA or MARKS?</td><td><table><td><input type=\"radio\" name =\"pcgpa\" value = \"CGPA\">CGPA</td><tr></tr><tr> <td><input type=\"number\" name=\"pcgpa1\" max=10 min=0> / <select name=pcgpa2><option value=\"4\">4</option><option value=\"10\">10</option></select></td><tr><td><input type=\"radio\" name=\"pcgpa\" value=\"MARKS\">MARKS</td><tr><td><input type=\"number\" name=\"pgimarks\" min=0 max=100></td></tr></table></td></tr>";
+            }
+            else
+            {
+            	document.getElementById("check20").innerHTML="";
+            	document.getElementById("check21").innerHTML="";
+            	document.getElementById("check22").innerHTML="";
+            	document.getElementById("check23").innerHTML="";
+            	document.getElementById("check24").innerHTML="";
+            	document.getElementById("check25").innerHTML="";
+            	document.getElementById("check26").innerHTML="";
+            	document.getElementById("check27").innerHTML="";
+            	document.getElementById("check28").innerHTML="";
+            }
+            if (document.et.check3.checked)
+            {
+            	document.getElementById("check30").innerHTML="<tr><td>Exam Name</td><td><input type=\"text\" name=\"oadname\"></td></tr>";
+            	document.getElementById("check31").innerHTML="<tr><td>Subject</td><td><input type=\"text\" name=\"oadsubject\"></td></tr>";
+            	document.getElementById("check32").innerHTML="<tr><td>Year*</td><td><select name=\"oadyear\"><option value=\"1\">2010</option><option value=\"2\">2011</option><option value=\"3\">2013</option><option value=\"4\">2014</option></select></td></tr>";
+            	document.getElementById("check33").innerHTML="<tr><td>Score</td><td><input type=\"number\" name=\"oadscore\" max=100 min=0></td></tr>";
+            	document.getElementById("check34").innerHTML="<tr><td>Rank</td><td><input type=\"number\" name=\"oadrank\" min=0 max =10000></td></tr>";
+            }
+            else
+            {
+            	document.getElementById("check30").innerHTML="";
+            	document.getElementById("check31").innerHTML="";
+            	document.getElementById("check32").innerHTML="";
+            	document.getElementById("check33").innerHTML="";
+            	document.getElementById("check34").innerHTML="";
+
+            }
+            if(document.et.check4.checked)
+            {
+            	document.getElementById("check40").innerHTML="<tr><td>Area</td><td><input type=\"text\" name=\"gatearea\"></td></tr>";
+            	document.getElementById("check41").innerHTML="<tr><td>Year of Graduation*</td><td><select name=\"gateyear\"><option value=\"1\">2010</option><option value=\"2\">2011</option><option value=\"3\">2013</option><option value=\"4\">2014</option></select></td></tr>";
+            	document.getElementById("check42").innerHTML="<tr><td>Marks(out of 100)</td><td><input type=\"number\" name=\"gatemarks\" max=100 min=0></td></tr>";
+            	document.getElementById("check43").innerHTML="<tr><td>Score</td><td><input type=\"number\" name=\"gatescore\" max=1000 min=0></td></tr>";
+            	document.getElementById("check44").innerHTML="<tr><td>Rank</td><td><input type=\"number\" name=\"gaterank\" max=10000 min=0></td></tr>";
+            	
+            }
+            else
+            {
+            	document.getElementById("check40").innerHTML="";
+            	document.getElementById("check41").innerHTML="";
+            	document.getElementById("check42").innerHTML="";
+            	document.getElementById("check43").innerHTML="";
+            	document.getElementById("check44").innerHTML="";
+
+            }
+        }
+        </script>
+</head>
+<body>
+
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Personal Information</a></li>
+    <li><a data-toggle="tab" href="#menu1">Educational Information</a></li>
+    <li><a data-toggle="tab" href="#menu2">Submit</a></li>
+  </ul>
+<form  name = "et" method="post"  action="StudentServlet">
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+ 		
+			<table  class =table>
+				<tr >
+					<td >Email*</td>
+					<td><input type="text" name="email"/></td>
+				</tr>
+				<tr>
+					<td>Name*</td>
+					<td><input type="text" name="name"></td>
+				</tr>
+				<tr>
+					<td valign="top">Address of correspondence*</td>
+					<td><textarea rows="6" cols="150" name="address"></textarea></td>
+				</tr>
+				<tr>
+					<td>Mobile*</td>
+					<td><input type="number" name="mobile"></td>
+				</tr>
+				<tr>
+					<td>PhD Stream*</td>
+					<td>
+						<table><tr><input type="radio" name="phdstream" value="Computer Science"> Computer Science<tr><td><input type="radio" name="phdstream" value="Electronics and Communication">Electronics and Communication</td>
+						<td><input type="radio" name="phdstream" value="Computational Biology">Computational Biology</td></table>
+						
+					</td>
+				</tr>
+				<tr>
+  					<td>PhD Area Prefrence1*</td>
+  					<td>
+  						<select name = "phdpref1">
+                  			<option value="1">--------</option>
+      						<option value="2">BioPhysics -CB</option>
+      						<option value="3">Structural Biology -CB</option>
+      						<option value="4">Systems Biology -CB</option>
+      						
+      					</select>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td>PhD Area Prefrence2</td>
+  					<td>
+  						<select name = "phdpref2">
+                  			<option value="1">--------</option>
+      						<option value="2">BioPhysics -CB</option>
+      						<option value="3">Structural Biology -CB</option>
+      						<option value="4">Systems Biology -CB</option>
+      						
+      					</select>
+  					</td>
+  				</tr>
+  				<tr>
+  					<td>PhD Area Prefrence3</td>
+  					<td>
+  						<select name = "phdpref3">
+                  			<option value="1">--------</option>
+      						<option value="2">BioPhysics -CB</option>
+      						<option value="3">Structural Biology -CB</option>
+      						<option value="4">Systems Biology -CB</option>
+      						
+      					</select>
+  					</td>
+  				</tr>
+  				<tr>
+					<td>Gender*</td>
+					<td>
+						<table>
+							<tr><input type="radio" name="gender" value="Male"> Male</tr>
+							<td> <input type="radio" name="gender" value="Female"> Female</td>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>Category*</td>
+					<td>
+						<table>
+							<tr> <input type="radio" name="category" value="General"> General</tr>
+							<td> <input type="radio" name="category" value="OBC">OBC
+						<input type="radio" name="category" value="SC">SC
+						<input type="radio" name="category" value="ST">ST</td>
+						</table>	
+					</td>
+				</tr>
+				<tr>
+					<td>Physically Disabled*</td>
+					<td>
+					<table>
+						<tr><input type="radio" name="pdisable" value="YES"> YES</tr>
+						<td><input type="radio" name="pdisable" value="NO"> NO</td>
+					</table>
+						</td>
+				</tr>
+				<tr>
+					<td>Date of Birth*</td>
+					<td><input type="date" name="dob"></td>
+				</tr>
+				<tr>
+					<td align="left"> Children/War Widows of defence Personnel killed/Disabled in Action*</td>
+					<td>
+					<table>
+						<tr><input type="radio" name="war" value= "YES"> YES
+						</tr>
+						<td></td>
+						<td><input type="radio" name="war" value="NO">NO </td>
+					</table>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Father's Name*</td>
+					<td><input type="text" name="father"></td>
+				</tr>
+				<tr>
+					<td>Nationality</td>
+					<td>
+						<select name = "nation">
+                  			<option value="none">--------</option>
+      						<option value="Indian">Indian</option>
+      						<option value="Australian">Australian</option>
+      						<option value="Russian">Russian</option>
+      					</select>
+					</td>
+				</tr>
+				<tr>
+					<td valign="top">Permanent correspondence*</td>
+					<td><textarea rows="3" cols="31" name="paddress"></textarea></td>
+				</tr>
+				<tr>
+					<td>Pincode*</td>
+					<td><input type="number" name="pin"></td>
+				</tr>
+			</table>
+		
+        </div>
+    <div id="menu1" class="tab-pane fade">
+		<fieldset>
+			<legend>
+				<b>SCHOOLING INFORMATION</b>
+			</legend>
+			<table>
+				<tr>
+					<td >Xth Board*</td>
+					<td><input type="text" name="xboard"/></td>
+				</tr>
+				<tr>
+					<td>Xth Marks*</td>
+					<td><input type="number" name="xmarks" min="0" max="100"  ></td>
+				</tr>
+				<tr>
+					<td>Year of passing Xth*</td>
+					<td><input type="number" name="xyear" value="2010" min="1950" max="2017"></td>
+				</tr>
+				<tr>
+					<td >XIIth Board*</td>
+					<td><input type="text" name="xiiboard"/></td>
+				</tr>
+				<tr>
+					<td>XIIth Marks*</td>
+					<td><input type="number" name="xiimarks" min="0" max="100"></td>
+				</tr>
+				<tr>
+					<td>Year of passing XIIth*</td>
+					<td><input type="number" name="xiiyear" value=2010 min="1950" max="2017"></td>
+				</tr>
+			</table>
+		</fieldset>
+		<fieldset>
+			<legend><b>Graduation Information</b></legend>
+			<table>
+				<tr>
+					<td>Degree*</td>
+					<td><input type="text" name=" gidegree"></td>
+				</tr>
+				<tr>
+					<td>Department/Discipline*</td>
+					<td><input type="text" name="gidepart"></td>
+				</tr>
+				<tr>
+					<td>Name of College*</td>
+					<td><input type="text" name="gicollege"></td>
+				</tr>
+				<tr>
+					<td>Name of University*</td>
+					<td><input type="text" name="giuni"></td>
+				</tr>
+				<tr>
+					<td>City*</td>
+					<td><input type="text" name="gicity"></td>
+				</tr>
+				<tr>
+		            <td>State*</td>
+		            <td>
+		              <select name = "gistate">
+		                <option value="1">All</option>
+		                  <option value="2">Andhra Pradesh</option>
+		                  <option value="3">Arunachal Pradesh</option>
+		                  <option value="4">Assam</option>
+		                  <option value="5">Bihar</option>
+		                  <option value="6">Chattisgarh</option>
+		                  <option value="7">Delhi</option>
+		                  <option value="8">Goa</option>
+		                  <option value="9">Gujarat</option>
+		                  <option value="10">Haryana</option>
+		                  <option value="11">Himachal Pradesh</option>
+		                  <option value="12">Jammu and Kashmir</option>
+		                  <option value="13">Jharkhand</option>
+		                  <option value="14">Karnataka</option>
+		                  <option value="15">Kerala</option>
+		                  <option value="16">Madhya Pradesh</option>
+		                  <option value="17">Maharashtra</option>
+		                  <option value="18">Manipur</option>
+		                  <option value="19">Meghalaya</option>
+		                  <option value="20">Mizoram</option>
+		                  <option value="21">Nagaland</option>
+		                  <option value="22">Odisha</option>
+		                  <option value="23">Rajasthan</option>
+		                  <option value="24">Sikkim</option>
+		                  <option value="25">Tamil Nadu</option>
+		                  <option value="26">Telangana</option>
+		                  <option value="27">Tripura</option>
+		                  <option value="28">Uttar Pradesh</option>
+		                  <option value="29">Uttarakhand</option>
+		                  <option value="30">West Bengal</option>
+		                </select>
+		            </td>
+          		</tr>
+          		<tr>
+          			<td >CGPA or MARKS?</td>
+          			<td> 
+          			<table>
+          				<td><input type="radio" name ="cgpa" value = "CGPA">CGPA
+          				</td>
+          				<tr></tr>
+          				<tr>
+          					<td><input type="number" name="cgpa1" max=10 min=0> /
+          						<select name=cgpa2>
+          							<option value="4">4</option>
+          							<option value="10">10</option>
+          						</select>
+          					</td>
+          				<tr> 
+          				<td><input type="radio" name="cgpa" value="MARKS">MARKS</td>
+          				<tr>
+          					<td><input type="number" name="gimarks" min=0 max=100>
+          					</td>
+          				</tr>
+          			</table>
+          			</td>
+          		</tr>
+			</table>
+		</fieldset>
+		<table class="table">
+			<td ><input type="checkbox" name="check1" onclick="validate()">Are you applying for ECE Phd </td>
+			<tr id="check10"></tr>
+			<tr id="check11"></tr>
+			<tr id="check12"></tr>
+			<tr id="check13"></tr>
+			<tr id="check14"></tr>
+			<td><input type="checkbox" name ="check2" onclick="validate()">Have you completed your post graduation?</td>
+			<tr id="check20"></tr>
+			<tr id="check21"></tr>
+			<tr id="check22"></tr>
+			<tr id="check23"></tr>
+			<tr id="check24"></tr>
+			<tr id="check25"></tr>
+			<tr id="check26"></tr>
+			<tr id="check27"></tr>
+			<tr id="check28"></tr>
+			<td><input type="checkbox" name ="check3" onclick="validate()">Other Academic Degrees?</td>
+			<tr id="check30"></tr>
+			<tr id="check31"></tr>
+			<tr id="check32"></tr>
+			<tr id="check33"></tr>
+			<tr id="check34"></tr>
+			<td><input type="checkbox" name="check4" onclick="validate()">Gate</td>
+			<tr id="check40"></tr>
+			<tr id="check41"></tr>
+			<tr id="check42"></tr>
+			<tr id="check43"></tr>
+			<tr id="check44"></tr>
+		</table>
+		<fieldset>
+			<legend>Achievements, CV and Statement of Purpose</legend>
+			<table>
+				<tr>
+					<td>Achievements</td>
+					<td><input type="text" name="achieve"></td>
+				</tr>
+				<tr>
+					<td>CV/Resume*</td>
+					<td><input type="file" name ="cv"></td>
+				</tr>
+				<tr>
+					<td>State of Purpose*</td>
+					<td><input type="file" name ="purpose"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</div>
+    <div id="menu2" class="tab-pane fade">
+    	<tr></tr>
+    	<tr></tr>
+     <button type="submit" ">SUBMIT</button>
+    </div>
+    
+  </div>
+  </form>
+</div>
+
+</body>
+</html>
